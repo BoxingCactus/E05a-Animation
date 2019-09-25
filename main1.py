@@ -10,6 +10,7 @@ class Ball:
     def __init__(self, position_x, position_y, radius, color):
 
         # Take the parameters of the init function above, and create instance variables out of them.
+        #So, this sets up the player.
         self.position_x = position_x
         self.position_y = position_y
         self.radius = radius
@@ -25,15 +26,18 @@ class MyGame(arcade.Window):
     def __init__(self, width, height, title):
 
         # Call the parent class's init function
+        #This sets up the window.
         super().__init__(width, height, title)
 
         # Make the mouse disappear when it is over the window.
         # So we just see our object, not the pointer.
+        #So, it hides the mouse while in the window.
         self.set_mouse_visible(False)
 
         arcade.set_background_color(arcade.color.ASH_GREY)
 
         # Create our ball
+        #It creates the PC.
         self.ball = Ball(50, 50, 15, arcade.color.AUBURN)
 
     def on_draw(self):

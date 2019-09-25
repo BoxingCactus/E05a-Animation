@@ -10,6 +10,7 @@ class Ball:
     def __init__(self, position_x, position_y, change_x, change_y, radius, color):
 
         # Take the parameters of the init function above, and create instance variables out of them.
+        #So, this sets up the movement.
         self.position_x = position_x
         self.position_y = position_y
         self.change_x = change_x
@@ -23,10 +24,12 @@ class Ball:
 
     def update(self):
         # Move the ball
+        #This is the movement.
         self.position_y += self.change_y
         self.position_x += self.change_x
 
         # See if the ball hit the edge of the screen. If so, change direction
+        #So, this keeps the ball from going off of the screen.
         if self.position_x < self.radius:
             self.position_x = self.radius
 
@@ -45,15 +48,18 @@ class MyGame(arcade.Window):
     def __init__(self, width, height, title):
 
         # Call the parent class's init function
+        #Sets up the window.
         super().__init__(width, height, title)
 
         # Make the mouse disappear when it is over the window.
         # So we just see our object, not the pointer.
+        #So, it keeps the mouse out of the player's way.
         self.set_mouse_visible(False)
 
         arcade.set_background_color(arcade.color.ASH_GREY)
 
         # Create our ball
+        #It makes the PC.
         self.ball = Ball(50, 50, 0, 0, 15, arcade.color.AUBURN)
 
     def on_draw(self):

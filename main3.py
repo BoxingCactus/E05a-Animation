@@ -25,16 +25,19 @@ class MyGame(arcade.Window):
         # directory this .py file is in. You can leave this out of your own
         # code, but it is needed to easily run the examples using "python -m"
         # as mentioned at the top of this program.
+        #So, it basically sets up everything.
         file_path = os.path.dirname(os.path.abspath(__file__))
         os.chdir(file_path)
 
         """ Set up the game and initialize the variables. """
 
         # Sprite lists
+        #This is where the images would be.
         self.player_list = None
         self.coin_list = None
 
         # Set up the player
+        #So, this sets up the initial player.
         self.score = 0
         self.player = None
 
@@ -43,6 +46,7 @@ class MyGame(arcade.Window):
         self.coin_list = arcade.SpriteList()
 
         # Set up the player
+        #Sets the player up for the walking animation.
         self.score = 0
         self.player = arcade.AnimatedWalkingSprite()
 
@@ -101,6 +105,7 @@ class MyGame(arcade.Window):
             self.coin_list.append(coin)
 
         # Set the background color
+        #So this sets up the background. Theoretcially you could use this to set up an image.
         arcade.set_background_color(arcade.color.AMAZON)
 
     def on_draw(self):
@@ -109,13 +114,16 @@ class MyGame(arcade.Window):
         """
 
         # This command has to happen before we start drawing
+        #It basically gives a render of the screen.
         arcade.start_render()
 
         # Draw all the sprites.
+        #It puts all the coins on screen.
         self.coin_list.draw()
         self.player_list.draw()
 
         # Put the text on the screen.
+        #This is what puts up the score.
         output = f"Score: {self.score}"
         arcade.draw_text(output, 10, 20, arcade.color.WHITE, 14)
 
@@ -150,6 +158,7 @@ class MyGame(arcade.Window):
         self.player_list.update_animation()
 
         # Generate a list of all sprites that collided with the player.
+        
         hit_list = arcade.check_for_collision_with_list(self.player, self.coin_list)
 
         # Loop through each colliding sprite, remove it, and add to the score.
