@@ -48,32 +48,32 @@ class MyGame(arcade.Window):
 
         character_scale = 0.75
         self.player.stand_right_textures = []
-        self.player.stand_right_textures.append(arcade.load_texture("images/character_sprites/character0.png",
+        self.player.stand_right_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                     scale=character_scale))
         self.player.stand_left_textures = []
-        self.player.stand_left_textures.append(arcade.load_texture("images/character_sprites/character0.png",
+        self.player.stand_left_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                    scale=character_scale, mirrored=True))
 
         self.player.walk_right_textures = []
 
-        self.player.walk_right_textures.append(arcade.load_texture("images/character_sprites/characterw0.png",
+        self.player.walk_right_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                    scale=character_scale))
-        self.player.walk_right_textures.append(arcade.load_texture("images/character_sprites/characterw1.png",
+        self.player.walk_right_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                    scale=character_scale))
-        self.player.walk_right_textures.append(arcade.load_texture("images/character_sprites/characterw2.png",
+        self.player.walk_right_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                    scale=character_scale))
-        self.player.walk_right_textures.append(arcade.load_texture("images/character_sprites/characterw3.png",
+        self.player.walk_right_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                    scale=character_scale))
 
         self.player.walk_left_textures = []
 
-        self.player.walk_left_textures.append(arcade.load_texture("images/character_sprites/characterw0.png",
+        self.player.walk_left_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                   scale=character_scale, mirrored=True))
-        self.player.walk_left_textures.append(arcade.load_texture("images/character_sprites/characterw1.png",
+        self.player.walk_left_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                   scale=character_scale, mirrored=True))
-        self.player.walk_left_textures.append(arcade.load_texture("images/character_sprites/characterw2.png",
+        self.player.walk_left_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                   scale=character_scale, mirrored=True))
-        self.player.walk_left_textures.append(arcade.load_texture("images/character_sprites/characterw3.png",
+        self.player.walk_left_textures.append(arcade.load_texture("images/character_sprites/character0.gif",
                                                                   scale=character_scale, mirrored=True))
 
         self.player.texture_change_distance = 20
@@ -90,12 +90,12 @@ class MyGame(arcade.Window):
             coin.center_y = random.randrange(SCREEN_HEIGHT)
 
             coin.textures = []
-            coin.textures.append(arcade.load_texture("images/gold_1.png", scale=COIN_SCALE))
-            coin.textures.append(arcade.load_texture("images/gold_2.png", scale=COIN_SCALE))
-            coin.textures.append(arcade.load_texture("images/gold_3.png", scale=COIN_SCALE))
-            coin.textures.append(arcade.load_texture("images/gold_4.png", scale=COIN_SCALE))
-            coin.textures.append(arcade.load_texture("images/gold_3.png", scale=COIN_SCALE))
-            coin.textures.append(arcade.load_texture("images/gold_2.png", scale=COIN_SCALE))
+            coin.textures.append(arcade.load_texture("images/gold_1.gif", scale=COIN_SCALE))
+            coin.textures.append(arcade.load_texture("images/gold_1.gif", scale=COIN_SCALE))
+            coin.textures.append(arcade.load_texture("images/gold_1.gif", scale=COIN_SCALE))
+            coin.textures.append(arcade.load_texture("images/gold_1.gif", scale=COIN_SCALE))
+            coin.textures.append(arcade.load_texture("images/gold_1.gif", scale=COIN_SCALE))
+            coin.textures.append(arcade.load_texture("images/gold_1.gif", scale=COIN_SCALE))
             coin.cur_texture_index = random.randrange(len(coin.textures))
 
             self.coin_list.append(coin)
